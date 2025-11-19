@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda env list:*)",
+      "Bash(copy .env.example .env)",
+      "Bash(dir C:SKN_1908_LLM00_Project_Yerifrontendpublic)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

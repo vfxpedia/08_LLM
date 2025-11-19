@@ -1,0 +1,48 @@
+# 환경변수 파일 (API 키 보호)
+.env
+.env.local
+.env.*.local
+
+# 출력 파일
+output/
+downloads/
+
+# Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 가상환경
+venv/
+env/
+ENV/
+
+# 에디터 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 로그 파일
+*.log
+
+# 데이터베이스
+*.db
+*.sqlite
+*.sqlite3
+
+# CSV/Excel 파일 (선택적, 필요시 제거)
+# *.csv
+# *.xlsx
+
