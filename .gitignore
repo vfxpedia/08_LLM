@@ -213,3 +213,4 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+00_Zipfit/docker_2/db_dump.sql
