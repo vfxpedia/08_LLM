@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    build: .
+    container_name: rag-chatbot-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-skn19_3rd_proj}
+      POSTGRES_USER: ${POSTGRES_USER:-rag_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-skn19}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db_dump.sql:/docker-entrypoint-initdb.d/02_data.sql
+    networks:
+      - rag-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag_user -d skn19_3rd_proj || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+
+networks:
+  rag-network:
+    driver: bridge
