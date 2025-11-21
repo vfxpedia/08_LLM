@@ -1,6 +1,10 @@
 # */chroma_db*
 *.env
 
+# 데이터 파일
+00_Zipfit/backend/data/
+00_Zipfit/backend/data/*
+00_Zipfit/backend/data/*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

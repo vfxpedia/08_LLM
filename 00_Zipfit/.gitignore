@@ -3,6 +3,11 @@
 .env.local
 .env.*.local
 
+# 데이터 파일
+data/
+data/*
+data/*.zip
+
 # 출력 파일
 output/
 downloads/
